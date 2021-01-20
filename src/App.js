@@ -37,6 +37,19 @@ function App() {
     //Testing
     // console.log("I HAVE A TOKEN 👉", token);
     // eslint-disable-next-line
+
+    spotify.getUserPlaylists().then((playlists) => {
+      dispatch({
+        type: "SET_PLAYLISTS",
+        playlists: playlists,
+      });
+    });
+    spotify.getPlaylist("4GpBODwgLjOwL6JcBunQcr").then(response => 
+      dispatch({
+        type: "SET_DISCOVER_WEEKLY",
+        discover_weekly: response,
+      })
+      );
   }, []);
 
   //Testing
