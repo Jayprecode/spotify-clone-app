@@ -12,4 +12,4 @@ function SidebarOption({title, Icon}) {
     )
 }
 
-export default SidebarOption
+export default SidebarOption;
